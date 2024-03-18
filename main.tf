@@ -1,4 +1,4 @@
-module "hello-world"{
+module "ec2-scheduler"{
     source = "./schedule"
-    count = 0
+    # count = 1
 }

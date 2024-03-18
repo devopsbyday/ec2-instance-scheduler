@@ -40,14 +40,5 @@ resource "aws_iam_role_policy_attachment" "lambda_policy_attach" {
   policy_arn = aws_iam_policy.lambda_policy.arn
 }
 
-resource "aws_lambda_function" "stop_ec2_instances" {
-  function_name = "stopEC2Instances"
 
-  filename         = "lambda_function.zip"
-  source_code_hash = filebase64sha256("lambda_function.zip")
-  handler          = "lambda_function.lambda_handler"
-  runtime          = "python3.8"
-
-  role = aws_iam_role.lambda_execution_role.arn
-}
 
