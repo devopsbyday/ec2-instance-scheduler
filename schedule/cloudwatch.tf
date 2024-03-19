@@ -1,6 +1,3 @@
-/*
-  Create cron event with cloudwatch
-*/
 
 resource "aws_lambda_permission" "allow_cloudwatch" {
     statement_id = "AllowExecutionFromCloudWatch"
